@@ -26,6 +26,10 @@ body {
 .screen {
     height: 4rem;
     margin-bottom: 4rem;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 .buttons-section {
@@ -46,4 +50,43 @@ body {
     color: #242424;
     cursor: pointer;
     font-size: 1.4rem;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    border: 2px solid #d2d8db;
+}
+
+.equals{
+    grid-column: 3/5;
+    background: #27bd33;
+    border: 2px solid #25ac30;
+    transition: all 0.2s ease;
+}
+
+.equals:hover{
+    border: 2px solid #1d8b26;
+}
+
+.opt-button{
+    color: #e9f0f4;
+    background: #ffa126;
+    border: 2px solid #eb9320;
+    transition: all 0.2s ease;
+}
+
+.opt-button:hover{
+    border: 2px solid #d3831c;
+
+}
+
+.fn-button{
+    color: #e9f0f4;
+    background: #489dff;
+    border: 2px solid #398ae6;
+    transition: all 0.2s ease;
+}
+
+.fn-button:hover{
+    border: 2px solid #2a78d1;
 }
