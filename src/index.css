@@ -27,3 +27,23 @@ body {
     height: 4rem;
     margin-bottom: 4rem;
 }
+
+.buttons-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+}
+
+.button {
+    background: #e9f0f4;
+    height: 3.4rem;
+    padding: 10px;
+    border: 2px solid #e2eaee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #242424;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
