@@ -3,6 +3,7 @@ import Wrapper from './components/Wrapper'
 import Screen from './components/Screen'
 import ButtonsSection from './components/ButtonsSection'
 import Button from './components/Button'
+import CalcProvider from './context/CalcContext'
 
 const btnVals = [
     ['AC', '+-', '%', '/'],
@@ -14,7 +15,7 @@ const btnVals = [
 
 function App() {
     return (
-        <>
+        <CalcProvider>
             <Wrapper>
                 <Screen />
                 <ButtonsSection>
@@ -23,7 +24,7 @@ function App() {
                     ))}
                 </ButtonsSection>
             </Wrapper>
-        </>
+        </CalcProvider>
     )
 }
 
