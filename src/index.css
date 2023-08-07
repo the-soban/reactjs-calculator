@@ -43,7 +43,7 @@ body {
     height: 3.4rem;
     padding: 10px;
     border: 2px solid #e2eaee;
-    border-radius: 10px;
+    border-radius: 74px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,39 +54,43 @@ body {
 }
 
 .button:hover {
+    background: #dee9f0;
     border: 2px solid #d2d8db;
 }
 
-.equals{
+.equals {
     grid-column: 3/5;
-    background: #27bd33;
-    border: 2px solid #25ac30;
+    color: white;
+    background: #ff6531;
+    border: 2px solid #e2501f;
     transition: all 0.2s ease;
 }
 
-.equals:hover{
-    border: 2px solid #1d8b26;
+.equals:hover {
+    background: #ff6531;
+    border: 2px solid #c23f13;
 }
 
-.opt-button{
+.opt-button {
     color: #e9f0f4;
     background: #ffa126;
     border: 2px solid #eb9320;
     transition: all 0.2s ease;
 }
 
-.opt-button:hover{
+.opt-button:hover {
+    background: #ffa126;
     border: 2px solid #d3831c;
-
 }
 
-.fn-button{
+.fn-button {
     color: #e9f0f4;
-    background: #489dff;
-    border: 2px solid #398ae6;
+    background: #27cf57;
+    border: 2px solid #19b445;
     transition: all 0.2s ease;
 }
 
-.fn-button:hover{
-    border: 2px solid #2a78d1;
+.fn-button:hover {
+    background: #27cf57;
+    border: 2px solid #14a53d;
 }
