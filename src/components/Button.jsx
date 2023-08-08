@@ -17,29 +17,7 @@ const getButtonType = (btn) => {
 }
 
 const Button = ({ value }) => {
-    const { calc, setCalc } = useContext(CalcContext)
-
-    const dotClick = () => {
-        setCalc({
-            ...calc,
-            num: !calc.num.toString().includes('.')
-                ? calc.num + value
-                : calc.num,
-        })
-    }
-
-    const btnClick = () => {
-        const results = {
-            '.': dotClick,
-        }
-        return results[value]()
-    }
-
-    return (
-        <button onClick={btnClick} className={`${getButtonType(value)} button`}>
-            {value}
-        </button>
-    )
+    return <button className={`${getButtonType(value)} button`}>{value}</button>
 }
 
 export default Button
