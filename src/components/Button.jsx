@@ -129,7 +129,7 @@ const Button = ({ value }) => {
 
     // prettier-ignore
     return (
-            <button onClick={handleBtnClick} className={`${getButtonType(value)} button dark-button`}>{value}</button>
+            <button onClick={handleBtnClick} className={`${getButtonType(value)} button`}>{value}</button>
     );
 }
 

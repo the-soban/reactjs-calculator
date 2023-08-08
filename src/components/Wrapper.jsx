@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Wrapper = ({ children }) => {
-    return <div className="wrapper dark">{children}</div>
+const Wrapper = ({ children, dark }) => {
+    // prettier-ignore
+    return <div className={`${dark ? 'dark' : ''} wrapper`}>{children}</div>
 }
 
 export default Wrapper

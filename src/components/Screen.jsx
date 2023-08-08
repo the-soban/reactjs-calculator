@@ -6,9 +6,7 @@ const Screen = () => {
     const { calc } = useContext(CalcContext)
 
     return (
-        <Textfit className="screen dark">
-            {calc.num ? calc.num : calc.res}
-        </Textfit>
+        <Textfit className="screen">{calc.num ? calc.num : calc.res}</Textfit>
     )
 }
 
