@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { CalcContext } from '../context/CalcContext'
+import Wrapper from './Wrapper'
 
 const getButtonType = (btn) => {
     const className = {
@@ -85,6 +86,26 @@ const Button = ({ value }) => {
         }
     }
 
+    //user clicks percentage button
+    const percentClick = () => {
+        setCalc({
+            // prettier-ignore
+            num: (calc.num / 100),
+            // prettier-ignore
+            res: (calc.res / 100),
+            sign: '',
+        })
+    }
+
+    //user clicks invert
+    const invertClick = () => {
+        setCalc({
+            num: calc.num ? calc.num * -1 : 0,
+            res: calc.res ? calc.res * -1 : 0,
+            sign: '',
+        })
+    }
+
     const handleBtnClick = () => {
         const results = {
             '.': dotClick,
@@ -96,6 +117,8 @@ const Button = ({ value }) => {
             '-': signClick,
             '+': signClick,
             '=': equalsClick,
+            '%': percentClick,
+            '+-': invertClick,
         }
         if (results[value]) {
             return results[value]()
@@ -106,7 +129,7 @@ const Button = ({ value }) => {
 
     // prettier-ignore
     return (
-        <button onClick={handleBtnClick} className={`${getButtonType(value)} button`}>{value}</button>
+            <button onClick={handleBtnClick} className={`${getButtonType(value)} button dark-button`}>{value}</button>
     );
 }
 
