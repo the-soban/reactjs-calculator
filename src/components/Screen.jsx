@@ -5,11 +5,7 @@ import { Textfit } from 'new-react-textfit'
 const Screen = () => {
     const { calc } = useContext(CalcContext)
 
-    return (
-        <Textfit max={70} mode="single" className="screen">
-            {calc.num ? calc.num : calc.res}
-        </Textfit>
-    )
+    return <Textfit className="screen">3423487079865</Textfit>
 }
 
 export default Screen
