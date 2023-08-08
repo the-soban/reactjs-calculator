@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .dark-body {
@@ -36,18 +36,18 @@ body {
 
 .moon-icon {
     width: 32px;
-    fill: #fac106;
+    fill: #ffa126;
     margin: 12px;
 }
 
 .wrapper {
-    background-color: #f4f6f8;
+    background-color: #f5f5f5;
     width: 20rem;
     padding: 2rem;
     margin: 4rem auto 0;
     border-radius: 1rem;
-    box-shadow: 0px 10px 24px -6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 4px 10px 24px -12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
 }
 
 .dark {
