@@ -16,11 +16,9 @@ const CalcProvider = ({ children }) => {
     }
 
     return (
-        <>
-            <CalcContext.Provider value={providerValue}>
-                {children}
-            </CalcContext.Provider>
-        </>
+        <CalcContext.Provider value={providerValue}>
+            {children}
+        </CalcContext.Provider>
     )
 }
 
