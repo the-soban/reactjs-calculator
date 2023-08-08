@@ -30,11 +30,71 @@ const Button = ({ value }) => {
         })
     }
 
+    const acClick = () => {
+        setCalc({ sign: '', num: 0, res: 0 })
+    }
+
+    const numClick = () => {
+        const numString = value.toString()
+
+        let numValue
+        if (numString === '0' && calc.num === 0) {
+            numValue = '0'
+        } else {
+            numValue = Number(calc.num + numString)
+        }
+
+        setCalc({
+            ...calc,
+            num: numValue,
+        })
+    }
+
+    const signClick = () => {
+        setCalc({
+            sign: value,
+            res: !calc.res && calc.num ? calc.num : calc.res,
+            num: 0,
+        })
+    }
+
+    const equalsClick = () => {
+        if (calc.res && calc.num) {
+            const math = (a, b, sign) => {
+                const result = {
+                    '+': (a, b) => a + b,
+                    '-': (a, b) => a - b,
+                    // prettier-ignore
+                    'x': (a, b) => a * b,
+                    '/': (a, b) => a / b,
+                }
+                return result[sign](a, b)
+            }
+            setCalc({
+                res: math(calc.res, calc.num, calc.sign),
+                sign: '',
+                num: 0,
+            })
+        }
+    }
+
     const btnClick = () => {
         const results = {
             '.': dotClick,
+            // prettier-ignore
+            'AC': acClick,
+            '/': signClick,
+            // prettier-ignore
+            'x': signClick,
+            '-': signClick,
+            '+': signClick,
+            '=': equalsClick,
         }
-        return results[value]()
+        if (results[value]) {
+            return results[value]
+        } else {
+            return numClick()
+        }
     }
 
     return (
